@@ -1,6 +1,6 @@
 # TASKS
 ### CRIE UM BANCO
-- Acesse https://github.com/redmasters/tasks/issues/1#issue-1437541585 para mais informações.
+- Acesse os https://github.com/redmasters/tasks/issues para mais informações.
 
 #### To-do List
 - Criar uma conta sem saldo;

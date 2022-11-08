@@ -8,4 +8,4 @@
 - Transferir para outra conta;
 - Sacar;
 - Exibir saldo;
-- Exibir extratos de movimentações (nao obrigatorio)
+- Exibir extratos de movimentações (nao obrigatorio);

@@ -18,4 +18,31 @@ public class Conta {
         System.out.println("Nome do Banco: "+this.nomeBanco);
         System.out.println("Saldo Atual: "+this.saldoAtual);
     }
+
+    public void sacar(double valorSacar){
+        if (saldoAtual > 0) {
+            double resultadoSaque = saldoAtual - valorSacar;
+            if (resultadoSaque <= 0) {
+                System.out.println("Saque Indisponível");
+            }
+            System.out.println(nomeTitular+" Sacou: " + valorSacar);
+            saldoAtual = resultadoSaque;
+            System.out.println("Saldo Atual: "+this.saldoAtual);
+
+        } else{
+            System.out.println("Saque Indisponível");
+        }
+
+    }
+
+    public void deposita(double valorDepositado){
+        if (valorDepositado > 0) {
+            double resultadoDeposito = saldoAtual + valorDepositado;
+            System.out.println(nomeTitular + " Depositou: " + valorDepositado);
+            saldoAtual = resultadoDeposito;
+            System.out.println("Saldo Atual: " + this.saldoAtual);
+        } else {
+            System.out.println("Deposito Indisponível");
+        }
+    }
 }

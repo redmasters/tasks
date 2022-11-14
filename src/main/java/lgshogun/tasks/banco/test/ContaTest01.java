@@ -10,7 +10,7 @@ public class ContaTest01 {
         conta1.numDaConta = 1272812;
         conta1.agencia = "0001";
         conta1.nomeBanco = "Banco FWV";
-        conta1.saldoAtual = 0.0;
+        conta1.saldoAtual = 200.0;
         conta1.imprime();
 
         // Conta com Saldo
@@ -21,5 +21,10 @@ public class ContaTest01 {
         conta2.nomeBanco = "Banco FWV";
         conta2.saldoAtual = 103320.60;
         conta2.imprime();
+
+        System.out.println("-------");
+        conta1.sacar(-20);
+        conta1.deposita(100);
+
     }
 }

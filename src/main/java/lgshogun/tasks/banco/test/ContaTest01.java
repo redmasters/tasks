@@ -13,6 +13,11 @@ public class ContaTest01 {
         conta1.saldoAtual = 200.0;
         conta1.imprime();
 
+        // Saque e Deposito da Conta 1
+        System.out.println("-------");
+        conta1.sacar(20);
+        conta1.deposita(100);
+
         // Conta com Saldo
         Conta conta2 = new Conta();
         conta2.nomeTitular = "Fernando Soares";
@@ -22,9 +27,7 @@ public class ContaTest01 {
         conta2.saldoAtual = 103320.60;
         conta2.imprime();
 
-        System.out.println("-------");
-        conta1.sacar(-20);
-        conta1.deposita(100);
+
 
     }
 }

@@ -22,14 +22,14 @@ public class Conta {
         if (saldoAtual > 0) {
             double resultadoSaque = saldoAtual - valorSacar;
             if (resultadoSaque <= 0) {
-                System.out.println("Saque Indisponível");
+                System.out.println("Saque não realizado: Saque maior que o saldo");
             }
             System.out.println(nomeTitular+" Sacou: " + valorSacar);
             saldoAtual = resultadoSaque;
             System.out.println("Saldo Atual: "+this.saldoAtual);
 
         } else{
-            System.out.println("Saque Indisponível");
+            System.out.println("Saque não realizado: Saldo igual a 0");
         }
 
     }
@@ -41,7 +41,8 @@ public class Conta {
             saldoAtual = resultadoDeposito;
             System.out.println("Saldo Atual: " + this.saldoAtual);
         } else {
-            System.out.println("Deposito Indisponível");
+            System.out.println("Deposito não realizado: Valor é menor que 0");
         }
     }
+
 }

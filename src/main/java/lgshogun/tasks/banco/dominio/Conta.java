@@ -7,42 +7,56 @@ public class Conta {
     public int numDaConta;
     public String nomeBanco;
     public double saldoAtual;
+    public String chavePix;
 
     // Impressão das Informações da Conta
-    public void imprime(){
-        System.out.println("----");
+    public void imprimir(){
+        System.out.println("----------------");
         System.out.println("Nome do Titular: "+this.nomeTitular);
         System.out.println("Agência: "+this.agencia);
         System.out.println("Número da Conta: "+this.numDaConta);
         System.out.println("Nome do Banco: "+this.nomeBanco);
         System.out.println("Saldo Atual: "+this.saldoAtual);
+        System.out.println("Chave Pix: "+this.chavePix);
     }
 
     public void sacar(double valorSacar){
         if (saldoAtual > 0) {
-            double resultadoSaque = saldoAtual - valorSacar;
-            if (resultadoSaque <= 0) {
+            double resultadoSacar = saldoAtual - valorSacar;
+            if (resultadoSacar < 0) {
                 System.out.println("Saque não realizado: Saque maior que o saldo");
+            } else {
+                System.out.println(nomeTitular+" Sacou: " + valorSacar);
+                saldoAtual = resultadoSacar;
+                System.out.println("Saldo Atual: "+this.saldoAtual);
             }
-            System.out.println(nomeTitular+" Sacou: " + valorSacar);
-            saldoAtual = resultadoSaque;
-            System.out.println("Saldo Atual: "+this.saldoAtual);
-
         } else{
             System.out.println("Saque não realizado: Saldo igual a 0");
         }
 
     }
 
-    public void deposita(double valorDepositado){
-        if (valorDepositado > 0) {
-            double resultadoDeposito = saldoAtual + valorDepositado;
-            System.out.println(nomeTitular + " Depositou: " + valorDepositado);
-            saldoAtual = resultadoDeposito;
+    public void depositar(double valorDepositar){
+        if (valorDepositar > 0) {
+            double resultadoDepositar = saldoAtual + valorDepositar;
+            System.out.println(nomeTitular + " Depositou: " + valorDepositar);
+            saldoAtual = resultadoDepositar;
             System.out.println("Saldo Atual: " + this.saldoAtual);
         } else {
-            System.out.println("Deposito não realizado: Valor é menor que 0");
+            System.out.println("Deposito não realizado: Valor é menor ou igual a 0");
         }
     }
 
+    public void transferir(String receptor, double valorTransferir){
+        if (valorTransferir > 0) {
+            double resultadoTransferir = saldoAtual - valorTransferir;
+            if (resultadoTransferir < 0 && receptor == "") {
+                System.out.println("Transferência não realizada: Chave não solicitada ou saldo indisponível");
+            } else {
+                System.out.println(nomeTitular + " Transferiu: " + valorTransferir + "; Para a Chave Pix: " + receptor);
+                saldoAtual = resultadoTransferir;
+                System.out.println("Saldo Atual: " + this.saldoAtual);
+            }
+        }
+    }
 }

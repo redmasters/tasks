@@ -9,7 +9,7 @@ public class Conta {
     public double saldoAtual;
     public String chavePix;
 
-    // Impressão das Informações da Conta
+    // Método: Impressão das informações da conta
     public void imprimir(){
         System.out.println("----------------");
         System.out.println("Nome do Titular: "+this.nomeTitular);
@@ -20,6 +20,7 @@ public class Conta {
         System.out.println("Chave Pix: "+this.chavePix);
     }
 
+    // Método: Saque do saldo da conta
     public void sacar(double valorSacar){
         if (saldoAtual > 0) {
             double resultadoSacar = saldoAtual - valorSacar;
@@ -36,6 +37,7 @@ public class Conta {
 
     }
 
+    // Método: Deposito de valores no saldo da conta
     public void depositar(double valorDepositar){
         if (valorDepositar > 0) {
             double resultadoDepositar = saldoAtual + valorDepositar;
@@ -47,6 +49,7 @@ public class Conta {
         }
     }
 
+    // Método: Transferência de valores do saldo da conta
     public void transferir(String receptor, double valorTransferir){
         if (valorTransferir > 0) {
             double resultadoTransferir = saldoAtual - valorTransferir;

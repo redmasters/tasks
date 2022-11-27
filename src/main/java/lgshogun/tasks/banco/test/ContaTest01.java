@@ -14,12 +14,11 @@ public class ContaTest01 {
         conta1.chavePix = "12345678";
         conta1.imprimir();
 
-        // Saque e Deposito da Conta 1
+        // Extrato de Movimentações da Conta 1
         System.out.println("--- Movimentações de " + conta1.nomeTitular + " ---");
         conta1.sacar(80);
         conta1.depositar(100);
         conta1.transferir("lauro.gpereira@gmail.com", 20);
-
 
         // Conta sem Saldo
         Conta conta2 = new Conta();

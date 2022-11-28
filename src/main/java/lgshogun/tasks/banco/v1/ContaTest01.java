@@ -1,5 +1,5 @@
-package lgshogun.tasks.banco.test;
-import lgshogun.tasks.banco.dominio.Conta;
+package lgshogun.tasks.banco.v1;
+import lgshogun.tasks.banco.v1.Conta;
 
 public class ContaTest01 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package lgshogun.tasks.banco.dominio;
+package lgshogun.tasks.banco.v1;
 public class Conta {
 
     // Modelo da Conta de Banco

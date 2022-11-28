@@ -7,7 +7,7 @@
 
 2 - ~~Criar uma conta com saldo~~;
 
-3 - Transferir para outra conta;
+3 - ~~Transferir para outra conta~~;
 
 4 - ~~Sacar~~;
 
@@ -15,4 +15,4 @@
 
 6 - ~~Exibir saldo~~;
 
-7 - Exibir extratos de movimentações (nao obrigatorio);
+7 - ~~Exibir extratos de movimentações~~;
